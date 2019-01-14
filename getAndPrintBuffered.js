@@ -1,4 +1,4 @@
-var https = require('https')
+var https = require('https');
 
 function getAndPrintHTML () {
   var arr = "";
@@ -11,10 +11,10 @@ function getAndPrintHTML () {
     response.setEncoding('utf8');
 
     response.on('data', function (data) {
-      arr += data
+      arr += data;
       console.log("data chunk", arr);
     });
-  })
+  });
 
-}
-console.log(getAndPrintHTML())
+};
+console.log(getAndPrintHTML());
